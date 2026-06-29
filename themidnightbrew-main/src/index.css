@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-cursive: "Parisienne", cursive;
+}
+
+body {
+  background-color: #FAF6F0;
+  color: #2A1810;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for modern cozy vibe */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A1810;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CAA662;
+}
+
+@media (pointer: fine) and (hover: hover) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
