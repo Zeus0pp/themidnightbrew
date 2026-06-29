@@ -1,0 +1,71 @@
+{
+  "entities": {
+    "Admin": {
+      "title": "Admin",
+      "description": "An administrator user",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" }
+      },
+      "required": ["email"]
+    },
+    "Photo": {
+      "title": "Photo",
+      "description": "A photo in the gallery/carousel",
+      "type": "object",
+      "properties": {
+        "url": { "type": "string" },
+        "alt": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["url", "alt"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "A customer review",
+      "type": "object",
+      "properties": {
+        "author": { "type": "string" },
+        "text": { "type": "string" },
+        "rating": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["author", "text", "rating"]
+    },
+    "MenuItem": {
+      "title": "MenuItem",
+      "description": "A menu item",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "group": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "isVeg": { "type": "boolean" },
+        "isBestseller": { "type": "boolean" },
+        "isChefOriginal": { "type": "boolean" }
+      },
+      "required": ["name", "category", "group", "price", "description", "image", "isVeg"]
+    }
+  },
+  "firestore": {
+    "/admins/{userId}": {
+      "schema": { "$ref": "#/entities/Admin" },
+      "description": "Administrator users"
+    },
+    "/photos/{photoId}": {
+      "schema": { "$ref": "#/entities/Photo" },
+      "description": "Gallery photos"
+    },
+    "/reviews/{reviewId}": {
+      "schema": { "$ref": "#/entities/Review" },
+      "description": "Customer reviews"
+    },
+    "/menuItems/{itemId}": {
+      "schema": { "$ref": "#/entities/MenuItem" },
+      "description": "Menu items"
+    }
+  }
+}

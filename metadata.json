@@ -1,0 +1,6 @@
+{
+  "name": "The Midnight Brew",
+  "description": "Cozy modern late-night coffee shop and bistro website featuring an interactive menu, chef favorites, table reservations, and event inquiries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
